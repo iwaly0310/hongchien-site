@@ -203,7 +203,7 @@ function home() {
       <div class="arch">
         <picture><img src="assets/img/clinic-1400.webp" srcset="assets/img/clinic-800.webp 800w, assets/img/clinic-1400.webp 1400w, assets/img/clinic-2200.webp 2200w" sizes="(max-width: 820px) 90vw, 44vw" alt="宏謙聯合診所明亮的候診空間" width="1400" height="933" fetchpriority="high"></picture>
       </div>
-      <img class="toon toon-a" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="170px" alt="" width="240" height="399">
+      <img class="toon toon-a" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="170px" alt="林禹喬院長 Q 版插畫" width="240" height="399">
     </div>
   </div>
 </section>`;
@@ -244,6 +244,7 @@ function home() {
           <p>${s.desc}</p>
           <span class="svc-more">前往健康減重衛教專區${I.arrow}</span>
           ${SVC.weight.replace("svc-ic", "svc-mark")}
+          <img class="svc-toon" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="170px" alt="林禹喬院長 Q 版插畫" width="240" height="399" loading="lazy">
         </a>`
         : `<article class="svc"${reveal(i)}>
           <span class="svc-no">0${i + 1}</span>
@@ -292,6 +293,7 @@ function home() {
       <h2${reveal(1)}>聯絡我們</h2>
       <p class="lede"${reveal(2)}>追蹤各個平台，以了解最新現況！</p>
       <a class="big-phone"${reveal(3)} href="tel:${S.tel}">${I.phone}<span>${S.phone}</span></a>
+      <img class="contact-toon" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="150px" alt="林禹喬院長 Q 版插畫" width="240" height="399" loading="lazy">
     </div>
     <div class="contact-cards">
       <a class="cc cc-line" href="${S.line}" target="_blank" rel="noopener"${reveal(1)}>

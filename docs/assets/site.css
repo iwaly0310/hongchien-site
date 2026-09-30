@@ -241,6 +241,8 @@ body.menu-open .menu-btn { background: var(--paper); color: var(--ink); }
 .svc.feature:hover .svc-more .i { transform: translateX(6px); }
 .svc-mark { position: absolute; right: -6%; bottom: -10%; width: 62%; max-width: 380px; fill: none; stroke: rgba(255, 250, 241, .07); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; transition: transform .8s var(--ease); }
 .svc.feature:hover .svc-mark { transform: rotate(-4deg) scale(1.03); }
+.svc-toon { position: absolute; right: clamp(12px, 3vw, 44px); bottom: 0; width: clamp(118px, 11vw, 160px); filter: drop-shadow(0 20px 22px rgba(0, 0, 0, .28)); transition: transform .6s var(--ease); }
+.svc.feature:hover .svc-toon { transform: translateY(-6px); }
 
 /* ---------- environment ---------- */
 .env-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 21 / 9; background: var(--bg-2); }
@@ -278,6 +280,8 @@ body.menu-open .menu-btn { background: var(--paper); color: var(--ink); }
 .big-phone .i { width: .7em; height: .7em; color: var(--sun); }
 .big-phone span { background: linear-gradient(var(--sun), var(--sun)) no-repeat 0 100% / 0 3px; transition: background-size .5s var(--ease); padding-bottom: 4px; }
 .big-phone:hover span { background-size: 100% 3px; }
+.contact-copy { position: relative; }
+.contact-toon { position: absolute; right: 0; top: -8px; width: clamp(96px, 9vw, 140px); filter: drop-shadow(0 20px 22px rgba(0, 0, 0, .35)); pointer-events: none; }
 .contact-cards { display: flex; flex-direction: column; gap: 12px; }
 .cc { display: flex; align-items: center; gap: 18px; padding: 20px 24px; border-radius: var(--r); background: rgba(255, 250, 241, .06); border: 1px solid rgba(255, 250, 241, .12); transition: background-color .3s, transform .45s var(--ease), border-color .3s; }
 .cc:hover { background: rgba(255, 250, 241, .12); transform: translateX(6px); border-color: rgba(255, 250, 241, .3); }
@@ -422,6 +426,8 @@ body.menu-open .menu-btn { background: var(--paper); color: var(--ink); }
   .route li { padding: 20px; gap: 14px; }
   .cc { padding: 16px 18px; gap: 14px; }
   .cc-qr { display: none; }
+  .contact-toon { width: 88px; top: 0; }
+  .svc-toon { width: 104px; top: 22px; bottom: auto; right: 18px; }
   .ftr-cols { grid-template-columns: 1fr; }
   .pull { padding: 32px 22px 26px; }
 }
