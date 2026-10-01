@@ -36,7 +36,7 @@ module.exports = {
       { d: ["林", "張"], derm: true },
       { d: ["李", "林"], note: "減重" },
       { d: ["張"] },
-      { d: ["李", "張"], derm: true },
+      { d: ["張"], derm: true },
       { d: ["林"] },
       { rot: true },
       { d: ["李"] },
