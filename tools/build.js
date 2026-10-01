@@ -415,6 +415,7 @@ w("index.html", home());
 w("fattyliver/index.html", fattyliver());
 w("404.html", notFound());
 w(".nojekyll", "");
+w("CNAME", "hongchienclinic.com.tw");
 w("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${S.url}/sitemap.xml\n`);
 w("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>${S.url}/</loc></url>\n<url><loc>${S.url}/fattyliver/</loc></url>\n</urlset>\n`);
 console.log("built → docs/");
