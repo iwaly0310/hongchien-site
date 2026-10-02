@@ -5,7 +5,7 @@ const FL = "C:/MYproject/宏謙官網/脂肪肝篩檢/images";
 const OUT = path.join(__dirname, "..", "docs", "assets", "img");
 fs.mkdirSync(OUT, { recursive: true });
 const jobs = [
-  ["dr-lin", SRC + "/3ae07339f007d946b1c9285c53213863.jpg", [480, 960]],
+  ["dr-lin", SRC + "/dr-lin-portrait.webp", [480, 960], false, { left: 215, top: 85, width: 530, height: 662 }],
   ["dr-chen", SRC + "/21418da59f051d62d6114c663358958e.png", [480, 960]],
   ["dr-li", SRC + "/a7919ebed942907214db1e263d1bb1db.jpg", [480, 672]],
   ["dr-chang", SRC + "/2e11225cce0f5380caa3b5a51df5a76a.png", [480, 632]],
@@ -18,13 +18,13 @@ const jobs = [
   ["fl-report", FL + "/report-card.jpg", [800, 1400]],
 ];
 (async () => {
-  for (const [name, src, widths, alpha] of jobs) {
+  for (const [name, src, widths, alpha, crop] of jobs) {
     if (!fs.existsSync(src)) { console.log("missing", src); continue; }
     const meta = await sharp(src).metadata();
     for (const w of widths) {
       const ww = Math.min(w, meta.width);
       const out = path.join(OUT, `${name}-${w}.webp`);
-      await sharp(src).resize({ width: ww }).webp({ quality: alpha ? 88 : 78, alphaQuality: 90, effort: 6 }).toFile(out);
+      await (crop ? sharp(src).extract(crop) : sharp(src)).resize({ width: ww }).webp({ quality: alpha ? 88 : 78, alphaQuality: 90, effort: 6 }).toFile(out);
       console.log(name, w, fs.statSync(out).size, `${meta.width}x${meta.height}`);
     }
   }
