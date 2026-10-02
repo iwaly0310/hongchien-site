@@ -30,6 +30,8 @@ const SVC = {
   checkup: '<svg class="svc-ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="8" width="28" height="34" rx="5"/><path d="M18 8V5h12v3"/><path d="M17 24l5 5 9-10"/><path d="M17 35h14"/></svg>',
 };
 
+const MEDAL = '<svg class="medal" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 4h14l-4 12h-6z"/><circle cx="24" cy="29" r="12"/><path d="M24 22.5l2 4.1 4.5.6-3.3 3.1.8 4.5-4-2.2-4 2.2.8-4.5-3.3-3.1 4.5-.6z" class="star"/></svg>';
+
 // ---------- layout ----------
 function layout({ base, title, desc, canonical, body, jsonld, page }) {
   return `<!doctype html>
@@ -225,10 +227,17 @@ function home() {
         <div class="dr-body">
           <p class="dr-role">${d.role}</p>
           <h3>${d.name}<span>醫師</span></h3>
+          ${d.focus ? `<p class="dr-focus"><b>專長</b>${d.focus.map((f) => `<span>${f}</span>`).join("")}</p>` : ""}
           <ul>${d.creds.map((c) => `<li>${c}</li>`).join("")}</ul>
         </div>
       </article>`).join("")}
     </div>
+  </div>
+</section>
+<section class="honors" aria-labelledby="honors-h">
+  <div class="wrap honors-in">
+    <div class="honors-hd"${reveal()}><p class="eyebrow"><span>Honors</span></p><h2 id="honors-h">院所榮譽</h2><p>長期深耕代謝健康與慢性病整合照護，獲得以下肯定。</p></div>
+    <ul class="honors-list">${D.awards.map((a, i) => `<li${reveal(i + 1)}>${MEDAL}<b>${a.name}</b></li>`).join("")}</ul>
   </div>
 </section>`;
 
