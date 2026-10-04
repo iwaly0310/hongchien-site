@@ -69,6 +69,7 @@ ${body}
 </main>
 ${footer(base)}
 <script src="${base}assets/site.js" defer></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="7cadf1bf-b05b-4c80-a86a-5e7b7192b3e0"></script>
 </body>
 </html>
 `;
