@@ -227,6 +227,7 @@ body.menu-open .menu-btn { background: var(--paper); color: var(--ink); }
 
 .dr-life { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 13.5px; font-weight: 700; letter-spacing: .06em; color: var(--ink-3); }
 .dr-life .i { width: 18px; height: 18px; color: var(--coral); }
+.dr-life .i.leaf { color: var(--li); }
 
 /* ---------- honors ---------- */
 .honors { background: var(--navy-deep); color: var(--paper); padding: clamp(48px, 6vw, 80px) 0; }

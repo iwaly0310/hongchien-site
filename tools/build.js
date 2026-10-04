@@ -30,6 +30,7 @@ const SVC = {
   checkup: '<svg class="svc-ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="8" width="28" height="34" rx="5"/><path d="M18 8V5h12v3"/><path d="M17 24l5 5 9-10"/><path d="M17 35h14"/></svg>',
 };
 
+const LEAF = '<svg class="i leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19 13 11"/></svg>';
 const RUN = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.5" cy="4.5" r="1.8"/><path d="M10 21l2.5-6 3 2.5V21M9 13.5l3-3 3.5 2 2.5-1.5M12 10.5 8.5 9 6 12"/></svg>';
 const MEDAL = '<svg class="medal" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 4h14l-4 12h-6z"/><circle cx="24" cy="29" r="12"/><path d="M24 22.5l2 4.1 4.5.6-3.3 3.1.8 4.5-4-2.2-4 2.2.8-4.5-3.3-3.1 4.5-.6z" class="star"/></svg>';
 
@@ -231,7 +232,7 @@ function home() {
           <h3>${d.name}<span>醫師</span></h3>
           ${d.focus ? `<p class="dr-focus"><b>專長</b>${d.focus.map((f) => `<span>${f}</span>`).join("")}</p>` : ""}
           <ul>${d.creds.map((c) => `<li>${c}</li>`).join("")}</ul>
-          ${d.life ? `<p class="dr-life">${RUN}<span>${d.life}</span></p>` : ""}
+          ${d.life ? `<p class="dr-life">${d.lifeIcon === "leaf" ? LEAF : RUN}<span>${d.life}</span></p>` : ""}
         </div>
       </article>`).join("")}
     </div>
