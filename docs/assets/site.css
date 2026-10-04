@@ -201,6 +201,7 @@ body.menu-open .menu-btn { background: var(--paper); color: var(--ink); }
 .notes li { display: flex; gap: 12px; align-items: flex-start; padding: 18px 20px; border-radius: var(--r); background: var(--navy); color: var(--paper); font-size: 15px; font-weight: 500; line-height: 1.7; }
 .notes li:first-child { background: var(--navy-deep); }
 .notes .spark { margin-top: 5px; }
+.notes small { display: block; margin-top: 6px; font-size: 14px; font-weight: 400; line-height: 1.7; color: rgba(255, 250, 241, .82); }
 
 /* ---------- doctors ---------- */
 .doctors { background: var(--paper); border-radius: var(--r-lg) var(--r-lg) 0 0; }
