@@ -293,7 +293,7 @@ function home() {
       <ol class="route">
         <li${reveal(1)}>${I.pin}<div><h3>地址</h3><p>${S.address}</p><a class="lnk" href="${S.mapPlace}" target="_blank" rel="noopener">在 Google 地圖開啟${I.ext}</a></div></li>
         <li${reveal(2)}>${I.train}<div><h3>搭捷運</h3><p>可搭到<b>徐匯中學捷運站</b>。從二號出口左轉約五十公尺後，再左轉進入仁愛街，走約 600 公尺，宏謙診所就在您的正前方。</p><a class="lnk" href="${S.mapMrt}" target="_blank" rel="noopener">捷運步行路線${I.ext}</a></div></li>
-        <li${reveal(3)}>${I.park}<div><h3>開車</h3><p>停車可停加油站旁邊的 <b>Times 停車場</b>。</p></div></li>
+        <li${reveal(3)}>${I.park}<div><h3>開車</h3><p>停車可停附近的 <b>Times 溪尾街停車場</b>，步行約 50 公尺。</p><a class="lnk" href="${S.parkMap}" target="_blank" rel="noopener">停車場位置${I.ext}</a></div></li>
       </ol>
     </div>
   </div>
