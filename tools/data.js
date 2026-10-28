@@ -15,6 +15,7 @@ module.exports = {
     fbId: "@JoeLinClinic",
     slim: "https://slim.hongchienclinic.com.tw",
     parkMap: "https://www.google.com/maps/search/?api=1&query=Times%20%E6%BA%AA%E5%B0%BE%E8%A1%97%E5%81%9C%E8%BB%8A%E5%A0%B4%20%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80",
+    busMap: "https://www.google.com/maps/search/?api=1&query=25.08331%2C121.48754",
     mapPlace: "https://www.google.com/maps?q=place_id:ChIJBaJBsWypQjQRiKp4drRhDl4",
     mapMrt: "https://www.google.com/maps/dir/247%E6%96%B0%E5%8C%97%E5%B8%82%E8%98%86%E6%B4%B2%E5%8D%80%E4%B8%AD%E5%B1%B1%E4%B8%80%E8%B7%AF3%E8%99%9F%E6%8D%B7%E9%81%8B%E5%BE%90%E5%8C%AF%E4%B8%AD%E5%AD%B8%E7%AB%99B1%E6%A8%93/@25.0810913,121.4772936,17z/data=!4m18!1m8!3m7!1s0x3442a8cfd4dab5e3:0xe7586187952016c!2z5o236YGL5b6Q5Yyv5Lit5a2456uZ!8m2!3d25.080729!4d121.479673!15sCh_lvpDljK_kuK3lrbjmjbfpgYvnq5kx6Jmf5Ye65Y-jWigiJuW-kOWMryDkuK3lrbgg5o23IOmBiyDnq5kgMSDomZ8g5Ye65Y-jkgESdG91cmlzdF9hdHRyYWN0aW9umgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVF0TXpkaGFFMTNFQUXgAQA!16s%2Fg%2F11rcss6h1l!4m8!1m0!1m5!1m1!1s0x3442a8cfd4dab5e3:0xe7586187952016c!2m2!1d121.479673!2d25.080729!3e2",
     mapEmbed: "https://www.google.com/maps?q=%E5%AE%8F%E8%AC%99%E8%81%AF%E5%90%88%E8%A8%BA%E6%89%80+%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%BB%81%E6%84%9B%E8%A1%97517%E8%99%9F&hl=zh-TW&z=16&output=embed",

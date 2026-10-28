@@ -14,6 +14,7 @@ const I = {
   phone: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
   pin: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
   train: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l1.5-4M15 21l-1.5-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg>',
+  bus: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 10h16M8 21v-3M16 21v-3"/><circle cx="8.5" cy="14.5" r="1"/><circle cx="15.5" cy="14.5" r="1"/></svg>',
   park: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M10 17V7h3.2a3 3 0 0 1 0 6H10"/></svg>',
   menu: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>',
   close: '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
@@ -293,7 +294,8 @@ function home() {
       <ol class="route">
         <li${reveal(1)}>${I.pin}<div><h3>地址</h3><p>${S.address}</p><a class="lnk" href="${S.mapPlace}" target="_blank" rel="noopener">在 Google 地圖開啟${I.ext}</a></div></li>
         <li${reveal(2)}>${I.train}<div><h3>搭捷運</h3><p>可搭到<b>徐匯中學捷運站</b>。從二號出口左轉約五十公尺後，再左轉進入仁愛街，走約 600 公尺，宏謙診所就在您的正前方。</p><a class="lnk" href="${S.mapMrt}" target="_blank" rel="noopener">捷運步行路線${I.ext}</a></div></li>
-        <li${reveal(3)}>${I.park}<div><h3>開車</h3><p>停車可停附近的 <b>Times 溪尾街停車場</b>，步行約 50 公尺。</p><a class="lnk" href="${S.parkMap}" target="_blank" rel="noopener">停車場位置${I.ext}</a></div></li>
+        <li${reveal(3)}>${I.bus}<div><h3>搭公車</h3><p><b>39、508</b> 都停「<b>碧華寺</b>」站，下車步行約 120 公尺。39 往臺北車站方向另停診所門口的「<b>慈福派出所</b>」站；539、662 也會經過。</p><a class="lnk" href="${S.busMap}" target="_blank" rel="noopener">公車站位置${I.ext}</a></div></li>
+        <li${reveal(4)}>${I.park}<div><h3>開車</h3><p>停車可停附近的 <b>Times 溪尾街停車場</b>，步行約 50 公尺。</p><a class="lnk" href="${S.parkMap}" target="_blank" rel="noopener">停車場位置${I.ext}</a></div></li>
       </ol>
     </div>
   </div>
