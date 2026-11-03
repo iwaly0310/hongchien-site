@@ -371,6 +371,9 @@ body.menu-open .menu-btn { background: var(--paper); color: var(--ink); }
 /* ---------- reveal ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
+/* 首屏元素不等 JS：用 CSS 動畫直接淡入，主圖（LCP）不被捲動淡入拖慢 */
+.js .hero [data-reveal], .js .art-hero[data-reveal] { opacity: 1; transform: none; transition: none; animation: revealIn .9s var(--ease) both; animation-delay: calc(var(--d, 0) * 90ms); }
+@keyframes revealIn { from { opacity: 0; transform: translateY(24px); } }
 
 .shot *, .shot *::before, .shot *::after { transition: none !important; }
 
