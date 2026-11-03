@@ -59,7 +59,9 @@ function layout({ base, title, desc, canonical, body, jsonld, page }) {
 <link rel="apple-touch-icon" href="${base}apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=optional"></noscript>
 <link rel="stylesheet" href="${base}assets/site.css">
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ""}
 </head>
@@ -91,7 +93,7 @@ function header(base, page) {
   return `<header class="hdr" data-hdr>
   <div class="hdr-in">
     <a class="brand" href="${base || "./"}" aria-label="宏謙聯合診所 首頁">
-      <img src="${base}assets/img/logo-160.png" alt="" width="44" height="44">
+      <img src="${base}assets/img/logo-88.png" srcset="${base}assets/img/logo-88.png 2x, ${base}assets/img/logo-132.png 3x" alt="" width="44" height="44">
       <span class="brand-t"><b>宏謙聯合診所</b><small>Hong Chien Clinic</small></span>
     </a>
     <nav class="nav" aria-label="主選單">${links}</nav>
@@ -209,7 +211,7 @@ function home() {
       <div class="arch">
         <picture><img src="assets/img/clinic-1400.webp" srcset="assets/img/clinic-800.webp 800w, assets/img/clinic-1400.webp 1400w, assets/img/clinic-2200.webp 2200w" sizes="(max-width: 820px) 90vw, 44vw" alt="宏謙聯合診所明亮的候診空間" width="1400" height="933" fetchpriority="high"></picture>
       </div>
-      <img class="toon toon-a" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="170px" alt="林禹喬院長 Q 版插畫" width="240" height="399">
+      <img class="toon toon-a" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-340.webp 340w, assets/img/toon-a-433.webp 433w" sizes="(max-width: 820px) 120px, 12vw" alt="林禹喬院長 Q 版插畫" width="240" height="399">
     </div>
   </div>
 </section>`;
@@ -227,7 +229,7 @@ function home() {
     ${secHead("02", "醫師團隊", "Our Doctors", "家醫科與皮膚科醫師，陪您照顧一家人的健康。")}
     <div class="doc-grid">
       ${D.doctors.map((d, i) => `<article class="dr"${reveal(i)}>
-        <div class="dr-arch"><img src="assets/img/${d.img}-480.webp" alt="${d.name}醫師" width="480" height="600" loading="lazy" style="object-position:${d.pos}"></div>
+        <div class="dr-arch"><img src="assets/img/${d.img}-480.webp" srcset="assets/img/${d.img}-320.webp 320w, assets/img/${d.img}-480.webp 480w" sizes="(max-width: 560px) 44vw, (max-width: 1040px) 30vw, 270px" alt="${d.name}醫師" width="480" height="600" loading="lazy" style="object-position:${d.pos}"></div>
         <div class="dr-body">
           <p class="dr-role">${d.role}</p>
           <h3>${d.name}<span>醫師</span></h3>
@@ -258,7 +260,7 @@ function home() {
           <p>${s.desc}</p>
           <span class="svc-more">前往健康減重衛教專區${I.arrow}</span>
           ${SVC.weight.replace("svc-ic", "svc-mark")}
-          <img class="svc-toon" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="170px" alt="林禹喬院長 Q 版插畫" width="240" height="399" loading="lazy">
+          <img class="svc-toon" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-340.webp 340w, assets/img/toon-a-433.webp 433w" sizes="(max-width: 820px) 104px, 11vw" alt="林禹喬院長 Q 版插畫" width="240" height="399" loading="lazy">
         </a>`
         : `<article class="svc"${reveal(i)}>
           <span class="svc-no">0${i + 1}</span>
@@ -308,7 +310,7 @@ function home() {
       <h2${reveal(1)}>聯絡我們</h2>
       <p class="lede"${reveal(2)}>追蹤各個平台，以了解最新現況！</p>
       <a class="big-phone"${reveal(3)} href="tel:${S.tel}">${I.phone}<span>${S.phone}</span></a>
-      <img class="contact-toon" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-433.webp 433w" sizes="150px" alt="林禹喬院長 Q 版插畫" width="240" height="399" loading="lazy">
+      <img class="contact-toon" src="assets/img/toon-a-240.webp" srcset="assets/img/toon-a-240.webp 240w, assets/img/toon-a-340.webp 340w, assets/img/toon-a-433.webp 433w" sizes="(max-width: 820px) 88px, 9vw" alt="林禹喬院長 Q 版插畫" width="240" height="399" loading="lazy">
     </div>
     <div class="contact-cards">
       <a class="cc cc-line" href="${S.line}" target="_blank" rel="noopener"${reveal(1)}>
@@ -350,7 +352,7 @@ function home() {
 
 function fattyliver() {
   const b = "../";
-  const img = (n, alt, cap) => `<figure class="art-fig"${reveal()}><img src="${b}assets/img/${n}-1400.webp" srcset="${b}assets/img/${n}-800.webp 800w, ${b}assets/img/${n}-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 760px" alt="${alt}" loading="lazy" width="1400" height="1050"><figcaption>${cap}</figcaption></figure>`;
+  const img = (n, alt, cap) => `<figure class="art-fig"${reveal()}><img src="${b}assets/img/${n}-800.webp" srcset="${b}assets/img/${n}-600.webp 600w, ${b}assets/img/${n}-800.webp 800w, ${b}assets/img/${n}-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 760px" alt="${alt}" loading="lazy" width="1400" height="1050"><figcaption>${cap}</figcaption></figure>`;
   const body = `<article class="art">
   <header class="art-hd wrap">
     <p class="eyebrow"${reveal()}><span class="no">活動紀實</span><span>2026.09.11</span></p>
@@ -362,7 +364,7 @@ function fattyliver() {
       <div><dt>合作單位</dt><dd>諾和諾德 Novo Nordisk</dd></div>
     </dl>
   </header>
-  <figure class="art-hero wrap"${reveal(2)}><img src="${b}assets/img/fl-explain-1400.webp" srcset="${b}assets/img/fl-explain-800.webp 800w, ${b}assets/img/fl-explain-1400.webp 1400w" sizes="(max-width: 1320px) 94vw, 1240px" alt="院長在診間向民眾說明肝臟掃描報告" width="1400" height="1050"></figure>
+  <figure class="art-hero wrap"${reveal(2)}><img src="${b}assets/img/fl-explain-1000.webp" srcset="${b}assets/img/fl-explain-600.webp 600w, ${b}assets/img/fl-explain-800.webp 800w, ${b}assets/img/fl-explain-1000.webp 1000w, ${b}assets/img/fl-explain-1400.webp 1400w" sizes="(max-width: 1320px) 94vw, 1240px" fetchpriority="high" alt="院長在診間向民眾說明肝臟掃描報告" width="1400" height="1050"></figure>
   <div class="art-body">
     <div class="art-stats"${reveal()}>
       <div><b>30</b><span>位民眾完成肝臟掃描</span></div>

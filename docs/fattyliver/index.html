@@ -20,7 +20,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=optional"></noscript>
 <link rel="stylesheet" href="../assets/site.css">
 
 </head>
@@ -29,7 +31,7 @@
 <header class="hdr" data-hdr>
   <div class="hdr-in">
     <a class="brand" href="../" aria-label="宏謙聯合診所 首頁">
-      <img src="../assets/img/logo-160.png" alt="" width="44" height="44">
+      <img src="../assets/img/logo-88.png" srcset="../assets/img/logo-88.png 2x, ../assets/img/logo-132.png 3x" alt="" width="44" height="44">
       <span class="brand-t"><b>宏謙聯合診所</b><small>Hong Chien Clinic</small></span>
     </a>
     <nav class="nav" aria-label="主選單"><a href="../#hours">門診時間</a><a href="../#contact">聯絡我們</a><a href="../#doctors">醫師簡介</a><a href="../#services">診療項目</a><a href="../fattyliver/" aria-current="page">活動紀實</a><a href="https://slim.hongchienclinic.com.tw" class="ext">健康減重衛教專區<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
@@ -56,7 +58,7 @@
       <div><dt>合作單位</dt><dd>諾和諾德 Novo Nordisk</dd></div>
     </dl>
   </header>
-  <figure class="art-hero wrap" data-reveal style="--d:2"><img src="../assets/img/fl-explain-1400.webp" srcset="../assets/img/fl-explain-800.webp 800w, ../assets/img/fl-explain-1400.webp 1400w" sizes="(max-width: 1320px) 94vw, 1240px" alt="院長在診間向民眾說明肝臟掃描報告" width="1400" height="1050"></figure>
+  <figure class="art-hero wrap" data-reveal style="--d:2"><img src="../assets/img/fl-explain-1000.webp" srcset="../assets/img/fl-explain-600.webp 600w, ../assets/img/fl-explain-800.webp 800w, ../assets/img/fl-explain-1000.webp 1000w, ../assets/img/fl-explain-1400.webp 1400w" sizes="(max-width: 1320px) 94vw, 1240px" fetchpriority="high" alt="院長在診間向民眾說明肝臟掃描報告" width="1400" height="1050"></figure>
   <div class="art-body">
     <div class="art-stats" data-reveal style="--d:0">
       <div><b>30</b><span>位民眾完成肝臟掃描</span></div>
@@ -66,7 +68,7 @@
     <h2 data-reveal style="--d:0">篩檢日這天發生的事</h2>
     <p data-reveal style="--d:0">健檢年年出現「脂肪肝」，除了少吃、多運動，下一步呢？9 月 11 日上午，宏謙聯合診所攜手諾和諾德舉辦脂肪肝掃描活動，成為該公司脂肪肝篩檢專案在雙北地區的首家合作診所。活動為約 30 位民眾完成肝臟掃描，每份報告均由家醫科院長親自判讀、當面解釋。</p>
     <p data-reveal style="--d:0">此次採用 FibroScan 肝臟掃描，約 5 至 10 分鐘即可完成，不需抽血，以非侵入方式定量評估肝臟脂肪堆積與硬度，讓民眾透過數據了解肝臟「有多油、有多硬」，並由醫師判讀脂肪肝及肝纖維化風險。民眾完成掃描後，隨即回到診間，由院長結合病史與既有檢查資料，說明結果及後續處理方向。</p>
-    <figure class="art-fig" data-reveal style="--d:0"><img src="../assets/img/fl-scan-1400.webp" srcset="../assets/img/fl-scan-800.webp 800w, ../assets/img/fl-scan-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 760px" alt="FibroScan 肝臟掃描現場" loading="lazy" width="1400" height="1050"><figcaption>FibroScan 肝臟掃描約 5 至 10 分鐘完成，不需抽血，一次量到肝臟的脂肪堆積與硬度。</figcaption></figure>
+    <figure class="art-fig" data-reveal style="--d:0"><img src="../assets/img/fl-scan-800.webp" srcset="../assets/img/fl-scan-600.webp 600w, ../assets/img/fl-scan-800.webp 800w, ../assets/img/fl-scan-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 760px" alt="FibroScan 肝臟掃描現場" loading="lazy" width="1400" height="1050"><figcaption>FibroScan 肝臟掃描約 5 至 10 分鐘完成，不需抽血，一次量到肝臟的脂肪堆積與硬度。</figcaption></figure>
     <blockquote class="pull" data-reveal style="--d:0"><p>「我們不希望病人每年都看到脂肪肝，卻每年都不知道該怎麼辦。看脂肪肝，不是只告訴病人『你太胖了，回去減肥』。我們要把三件事說清楚：目前風險在哪裡、需要怎麼處理、什麼時候回來追蹤。檢查只是開始，後面的照護才是重點。」</p><footer>家醫科院長　林禹喬醫師</footer></blockquote>
     <p data-reveal style="--d:0">當天完成檢測的民眾中，有 21 位經醫師判讀需進一步評估肝纖維化風險，診所將依個別情況安排追蹤或轉介。</p>
     <p data-reveal style="--d:0">有參與民眾聽到自己肝纖維化顯示中度風險的黃燈，當場驚問「那怎麼辦？」經醫師解說後，清楚了下一步目標。參與活動的黃小姐說：「以前早就知道有脂肪肝，但報告收起來就沒再管。這次醫師把數字代表什麼、接下來要做什麼講清楚。」</p>
@@ -78,7 +80,7 @@
       <li><b>體重管理與健康減重門診</b><span>肥胖症專科認證醫師，依個別狀況安排飲食調整、治療評估與定期追蹤。</span></li>
       <li><b>糖尿病與三高整合照護</b><span>糖尿病、腎臟病與代謝症候群照護網責任診所，長期追蹤血糖、血壓、血脂與尿酸。</span></li>
     </ul>
-    <figure class="art-fig" data-reveal style="--d:0"><img src="../assets/img/fl-report-1400.webp" srcset="../assets/img/fl-report-800.webp 800w, ../assets/img/fl-report-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 760px" alt="篩檢日每位受檢者拿到的行動卡" loading="lazy" width="1400" height="1050"><figcaption>篩檢日每位受檢者都拿到一張行動卡，用紅黃綠燈標示風險，清楚知道接下來該做什麼。</figcaption></figure>
+    <figure class="art-fig" data-reveal style="--d:0"><img src="../assets/img/fl-report-800.webp" srcset="../assets/img/fl-report-600.webp 600w, ../assets/img/fl-report-800.webp 800w, ../assets/img/fl-report-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 760px" alt="篩檢日每位受檢者拿到的行動卡" loading="lazy" width="1400" height="1050"><figcaption>篩檢日每位受檢者都拿到一張行動卡，用紅黃綠燈標示風險，清楚知道接下來該做什麼。</figcaption></figure>
 
     <h2 data-reveal style="--d:0">我們看肝，也看腰圍、血糖、血脂和血壓</h2>
     <p data-reveal style="--d:0">「脂肪肝往往牽涉一整組代謝問題。我們看肝，也看腰圍、血糖、血脂和血壓，把這些問題一起處理，才是完整的照護。」院長說。</p>
